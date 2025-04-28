@@ -250,12 +250,8 @@ button {
     border: none;
     cursor: pointer;
     color: rgb(243, 243, 243);
-    transition: color 0.5s;
 }
 
-button:hover {
-    color: rgb(37, 37, 37);
-}
 
 button:nth-child(1) {
     animation: expand 4s infinite;
