@@ -13,8 +13,8 @@ hamburger.addEventListener('click', ()=>{
   navbar.classList.remove(isActive ? 'collapse' : 'expand');
   navMenu.classList.toggle(isActive ? 'active' : 'inactive');
   navMenu.classList.remove(isActive ? 'inactive' : 'active');
-  main.classList.toggle(isActive ? 'down' : 'up');
-  main.classList.remove(isActive ? 'up' : 'down');
+  // main.classList.toggle(isActive ? 'down' : 'up');
+  // main.classList.remove(isActive ? 'up' : 'down');
 
 })
 
@@ -25,8 +25,8 @@ document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', 
   navbar.classList.remove(isActive ? 'collapse' : 'expand');
   navMenu.classList.toggle(isActive ? 'active' : 'inactive');
   navMenu.classList.remove(isActive ? 'inactive' : 'active');
-  main.classList.toggle(isActive ? 'down' : 'up');
-  main.classList.remove(isActive ? 'up' : 'down');
+  // main.classList.toggle(isActive ? 'down' : 'up');
+  // main.classList.remove(isActive ? 'up' : 'down');
 }))
 
 window.addEventListener('scroll', function() {
