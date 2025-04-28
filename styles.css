@@ -1,0 +1,470 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    scroll-behavior: smooth;
+}
+
+body.darken {
+    background-color: black;
+}
+
+.faculty-glyphic-regular {
+    font-family: "Faculty Glyphic", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.aladin-regular {
+    font-family: "Aladin", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+header {
+    color: black;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: all 0.5s;
+    z-index: 1;
+    animation: fadeIn 1s;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 100;
+    }
+}
+
+header.sticky {
+    background: white;
+    transition: all 0.5s;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+.navbar {
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1rem;
+}
+
+.navbar.expand {
+    animation: expand-down 0.5s forwards;
+}
+
+@keyframes expand-down {
+    0% {
+        height: 80px;
+    }
+
+    100% {
+        height: 170px;
+    }
+}
+
+.navbar.collapse {
+    animation: collapse 0.7s forwards;
+}
+
+@keyframes collapse {
+    0% {
+        height: 170px;
+    }
+
+    100% {
+        height: 80px;
+    }
+}
+
+.nav-menu {
+    font-size: 2rem;
+    padding: 1rem 0 0 0;
+    text-align: left;
+    text-align: center;
+    color: white;
+}
+
+.nav-menu .nav-link {
+    margin-left: 4rem;
+}
+
+.nav-menu li:nth-child(1) {
+    width: 50%;
+    margin: 1rem auto;
+}
+
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+    margin-top: 1.75rem;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: white;
+    z-index: 1000;
+}
+
+.bar.sticky {
+    background-color: black;
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+
+.brand {
+    margin-top: 0.5rem;
+}
+
+.main {
+    position: relative;
+    top: 84px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 25px 25px 0 25px;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    animation: fadeUp 1s;
+}
+
+@keyframes fadeUp {
+    0% {
+        opacity: 0;
+        transform: translateY(-25px);
+    }
+
+    100% {
+        opacity: 100;
+        transform: translateY(0px);
+    }
+}
+
+.main.darken {
+    background-color: rgb(0, 0, 0);
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+
+.main.down {
+    animation: down 0.5s forwards;
+}
+
+.main.up {
+    animation: up 0.5s forwards;
+}
+
+@keyframes down {
+    0% {
+        top: 84px;
+    }
+
+    100% {
+        top: 170px
+    }
+}
+
+@keyframes up {
+    0% {
+        top: 170px;
+    }
+
+    100% {
+        top: 84px;
+    }
+}
+
+.description {
+    position: relative;
+    width: 100%;
+    margin: 2rem 0;
+    padding: 0 1rem 2rem 1rem;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.description.darken {
+    background-color: black;
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+
+.description.down {
+    animation: down 0.5s forwards;
+}
+
+.description.up {
+    animation: up 0.5s forwards;
+}
+
+.text {
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.text.lighten {
+    color: white;
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+
+h2,
+h3 {
+    font-size: 2rem;
+}
+
+h2 {
+    margin: 1rem 0 2rem 0;
+}
+
+h3 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+h3:nth-of-type(2) {
+    margin-top: 1rem;
+    animation: change 3s infinite;
+}
+
+.btns {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    align-items: center;
+}
+
+h4 {
+    margin-top: 2rem;
+}
+
+button {
+    padding: 1rem;
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    background-image: linear-gradient(to right, #00d2ff, #3a7bd5);
+    border: none;
+    cursor: pointer;
+    color: rgb(243, 243, 243);
+    transition: color 0.5s;
+}
+
+button:hover {
+    color: rgb(37, 37, 37);
+}
+
+button:nth-child(1) {
+    animation: expand 4s infinite;
+    width: 100%;
+}
+
+button:nth-child(2) {
+    animation: expand 4s 0.5s infinite;
+    width: 100%;
+}
+
+button:nth-child(3) {
+    animation: expand 4s 1s infinite;
+    width: 100%;
+}
+
+@keyframes expand {
+    0% {
+        width: 90%;
+        border-radius: 5px;
+    }
+
+    50% {
+        width: 60%;
+        border-radius: 20px;
+    }
+
+    100% {
+        width: 90%;
+        border-radius: 5px;
+
+    }
+}
+
+@keyframes change {
+
+    0% {
+        color: red;
+    }
+
+    50% {
+        color: rgb(0, 255, 234);
+    }
+
+    100% {
+        color: rgb(255, 0, 242);
+    }
+
+    50% {
+        color: rgb(0, 255, 234);
+    }
+
+    0% {
+        color: red;
+    }
+}
+
+#upward {
+    position: fixed;
+    bottom: 20px;
+    right: -100px;
+    border-radius: 30%;
+    padding: 0.8rem;
+    background: white;
+    color: black;
+    transition: right 0.5s ease-out;
+}
+
+#upward.visible {
+    right: 10px;
+    transition: right 0.5s ease-in;
+    animation: bounce 3s infinite;
+
+}
+
+@keyframes bounce {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(0.8);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@media(max-width:768px) {
+    .hamburger {
+        display: block;
+    }
+
+    .hamburger.active {
+        z-index: 1000;
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+        background-color: white;
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+        background-color: white;
+    }
+
+    .hamburger.active .bar.sticky:nth-child(1) {
+        background-color: black;
+        transition: all 0.5s;
+    }
+
+    .hamburger.active .bar.sticky:nth-child(3) {
+        background-color: black;
+        transition: all 0.5s;
+    }
+
+    .nav-menu {
+        width: 100%;
+        flex-direction: column;
+        transition: 0.5s;
+        visibility: hidden;
+        color: white;
+        margin-top: 2rem;
+    }
+
+    .nav-item {
+        margin: 16px 0;
+    }
+
+    .nav-menu.active {
+        visibility: visible;
+        animation: appear 1.5s forwards;
+    }
+
+    @keyframes appear {
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 100;
+        }
+    }
+
+    .nav-menu.darken {
+        color: rgb(0, 0, 0);
+        -webkit-transition: all 0.5s ease-in-out;
+        transition: all 0.5s ease-in-out;
+    }
+
+    .nav-menu .nav-link {
+        border-bottom: 1px solid white;
+        color: white;
+        -webkit-transition: all 0.5s ease-in-out;
+        transition: all 0.5s ease-in-out;
+    }
+
+    .nav-menu .nav-link.darken {
+        color: rgb(0, 0, 0);
+        border-bottom: 1px solid black;
+        -webkit-transition: all 0.5s ease-in-out;
+        transition: all 0.5s ease-in-out;
+    }
+
+    .nav-menu.inactive {
+        display: visible;
+    }
+
+    .nav-menu.inactive .nav-link {
+        visibility: hidden;
+        animation: disappear 0.3s forwards;
+    }
+
+    @keyframes disappear {
+        0% {
+            opacity: 100;
+        }
+
+        100% {
+            opacity: 0;
+        }
+    }
+}
